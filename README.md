@@ -41,3 +41,105 @@ requirements, such as:
 - Using docker
 - Having a script to run all components
 - Importing the supplied data into a well normalized schema
+
+## Running the application
+
+- Clone the project -
+
+```
+git clone https://github.com/bhansaliyash/Food-Animal-System
+
+cd Food-Animal-System
+```
+
+- The application is dockerized so we can directly run the appication using - 
+```
+docker-compose up -d --build
+```
+
+- Run migrations
+```
+docker-compose exec backend python manage.py migrate
+```
+
+- Running this will import the csv data into the tables
+```
+docker-compose exec backend python manage.py runscript load_data
+
+```
+
+- To stop the container use - 
+```
+docker-compose down
+```
+
+# Farm and Movement API
+
+This Django application provides APIs for managing farms and movements of items between farms. The application is built using the Django REST Framework.
+
+## Installation
+
+1. Clone the repository:
+
+   ```
+   git clone <repository_url>
+   ```
+
+2. Install the dependencies:
+
+   ```
+   pip install -r requirements.txt
+   ```
+
+3. Apply the database migrations:
+
+   ```
+   python manage.py migrate
+   ```
+
+4. Run the development server:
+
+   ```
+   python manage.py runserver
+   ```
+
+The APIs will be accessible at `http://localhost:8000/`.
+
+## API Endpoints
+
+### Farm API
+
+#### Create a Farm
+
+- URL: `/farms/`
+- Method: `POST`
+- Response:
+  - Status Code: 200 (OK) if successful, 400 (Bad Request) if there are validation errors.
+
+#### Get Farms
+
+- URL: `/farms/`
+- Method: `GET`
+- Query Parameters:
+  - `premise_id` (optional, string): Filter farms by premise_id.
+- Response:
+  - Status Code: 200 (OK) if successful, 400 (Bad Request) if there are errors.
+
+### Movement API
+
+#### Create a Movement
+
+- URL: `/movements/`
+- Method: `POST`
+- Response:
+  - Status Code: 200 (OK) if successful, 400 (Bad Request) if there are validation errors.
+
+#### Get Movements
+
+- URL: `/movements/`
+- Method: `GET`
+- Query Parameters:
+  - `movement_id` (optional, string): Get a movement by movement_id.
+  - `premise_id` (optional, string): Filter movements by origin_premise_id. (For search functionality)
+- Response:
+  - Status Code: 200 (OK) if successful, 400 (Bad Request) if there are errors.
