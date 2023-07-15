@@ -73,37 +73,6 @@ docker-compose exec backend python manage.py runscript load_data
 docker-compose down
 ```
 
-# Farm and Movement API
-
-This Django application provides APIs for managing farms and movements of items between farms. The application is built using the Django REST Framework.
-
-## Installation
-
-1. Clone the repository:
-
-   ```
-   git clone <repository_url>
-   ```
-
-2. Install the dependencies:
-
-   ```
-   pip install -r requirements.txt
-   ```
-
-3. Apply the database migrations:
-
-   ```
-   python manage.py migrate
-   ```
-
-4. Run the development server:
-
-   ```
-   python manage.py runserver
-   ```
-
-The APIs will be accessible at `http://localhost:8000/`.
 
 ## API Endpoints
 
