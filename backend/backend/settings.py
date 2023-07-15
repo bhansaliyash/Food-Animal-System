@@ -28,11 +28,8 @@ SECRET_KEY = "django-insecure-*xev6nnrywyc$%*s@1eynmn5ur0m!grknbfyet4u2c@q&v3+36
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
-CORS_ORIGIN_WHITELIST = [
-    'http://0.0.0.0:3000',
-]
+#For dev purpose I would use whitelist in production
+CORS_ORIGIN_ALLOW_ALL = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -84,12 +81,13 @@ WSGI_APPLICATION = "backend.wsgi.application"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'postgres',
-        'PORT': '5432',
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "postgres",
+        "HOST": "db", 
+        "PORT": 5432,
     }
 }
 
