@@ -113,6 +113,7 @@ The APIs will be accessible at `http://localhost:8000/`.
 
 - URL: `/farm/`
 - Method: `POST`
+- Body: `All fields for Farm model in JSON format`
 - Response:
   - Status Code: 200 (OK) if successful, 400 (Bad Request) if there are validation errors.
 
@@ -133,6 +134,7 @@ The APIs will be accessible at `http://localhost:8000/`.
 
 - URL: `/movements/`
 - Method: `POST`
+- Body: `All fields for Movement model in JSON format`
 - Response:
   - Status Code: 200 (OK) if successful, 400 (Bad Request) if there are validation errors.
 
