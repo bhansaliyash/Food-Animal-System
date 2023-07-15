@@ -73,6 +73,30 @@ docker-compose exec backend python manage.py runscript load_data
 docker-compose down
 ```
 
+## Models
+
+We have used two Models. For now we need to give input in the required format for adding farms and movement or else it will show an error message - 
+
+### Farm Model
+premise_id = `string with length 7 - primary key`  
+name = `string with length 30`  
+address = `string with length 50`  
+city = `string with length 20`  
+state = `string with length 20`  
+latitude = `float field`  
+longitude = `float field`  
+postal_code = `int with length 6`  
+total_population = `positive int`
+
+### Movement Model
+movement_id = `auto increment id - primary key`  
+company = `string with length 30`   
+origin_premise_id = `foriegn key to farm id`  
+dest_premise_id = `foriegn key to farm id`  
+species = `string with length 15`   
+shipment_start_date = `date field in YYYY-MM-DD format`  
+items_moved = `positive int`  
+reason = `string with length 50` 
 
 ## API Endpoints
 
