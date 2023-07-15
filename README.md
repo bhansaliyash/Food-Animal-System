@@ -111,14 +111,16 @@ The APIs will be accessible at `http://localhost:8000/`.
 
 #### Create a Farm
 
-- URL: `/farms/`
+- URL: `/farm/`
 - Method: `POST`
 - Response:
   - Status Code: 200 (OK) if successful, 400 (Bad Request) if there are validation errors.
 
 #### Get Farms
 
-- URL: `/farms/`
+- URL: 
+  - `/farm/`  
+  - `/farm/?premise_id=<>`
 - Method: `GET`
 - Query Parameters:
   - `premise_id` (optional, string): Filter farms by premise_id.
@@ -136,7 +138,10 @@ The APIs will be accessible at `http://localhost:8000/`.
 
 #### Get Movements
 
-- URL: `/movements/`
+- URLs: 
+  - `/movements/`  
+  - `/movements/?movement_id=<>`  
+  - `/movements/?premise_id=<>`
 - Method: `GET`
 - Query Parameters:
   - `movement_id` (optional, string): Get a movement by movement_id.
