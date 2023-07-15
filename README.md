@@ -119,3 +119,15 @@ docker-compose down
   - `premise_id` (optional, string): Filter movements by origin_premise_id. (For search functionality)
 - Response:
   - Status Code: 200 (OK) if successful, 400 (Bad Request) if there are errors.
+ 
+### Images
+
+<img width="500" alt="img1" src="https://github.com/bhansaliyash/Food-Animal-System/assets/21220880/da58e1bc-eab0-4cfd-8118-5486b3d1a8e7">
+
+<img width="500" alt="img4" src="https://github.com/bhansaliyash/Food-Animal-System/assets/21220880/27a59237-7e19-41b9-a709-87ad4d03691c">
+
+<img width="500" alt="img3" src="https://github.com/bhansaliyash/Food-Animal-System/assets/21220880/357827b7-af7b-410e-9c10-95a46782e51d">
+
+<img width="500" alt="img2" src="https://github.com/bhansaliyash/Food-Animal-System/assets/21220880/ed5e629f-9e2c-4105-8af3-d8e353caacf6">
+
+
